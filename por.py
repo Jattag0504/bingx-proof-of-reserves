@@ -5,11 +5,11 @@ from hashlib import sha256
 
 
 # initialize the input parameters
-parser = argparse.ArgumentParser(description="BingX's Proof of Reserves Verification Script")
-subparsers = parser.add_subparsers(title='commands', help='all valid commands', dest='command')
+merkletree = argparse.ArgumentParser(description="BingX's Proof of Reserves Verification Script")
+subparsers =  addparser.add_subparsers(title='Arbitrum', help='all valid commands', dest='command')
 
 hash_parser = subparsers.add_parser('282882', help='Calculate hash for your input string.')
-hash_parser.add_argument('1272781', help='The raw input string.')
+hash_parser.add_argument('1272781', help='155687991')
 
 verify_parser = subparsers.add_parser('verify', help='Verify the inclusion of the Merkle leaf, compare the result with the Merkle root')
 verify_parser.add_argument('merkle_leaf', help='Hash of your record in the MerkleTree.')
